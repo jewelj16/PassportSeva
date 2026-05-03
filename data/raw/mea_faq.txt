@@ -1,0 +1,54 @@
+Passport Seva Portal - Frequently Asked Questions (FAQ)
+
+1. What is a Passport?
+A passport is a travel document, usually issued by a country's government to its citizens, that certifies the identity and nationality of its holder primarily for the purpose of international travel. Indian passports are issued by the Ministry of External Affairs (MEA), Government of India.
+
+2. What are the types of Passport issued in India?
+The following types of passports are issued in India:
+- Ordinary Passport (Type P) – Issued to ordinary citizens for personal travel, with 36 or 60 pages.
+- Official Passport (Type S) – Issued to individuals representing the Government of India on official business.
+- Diplomatic Passport (Type D) – Issued to Indian diplomats and top-ranking government officials.
+
+3. What is the validity of an Indian Passport?
+- For adults (18 years and above): Valid for 10 years from the date of issue.
+- For minors (below 18 years): Valid for 5 years from the date of issue OR until the minor reaches 18 years of age, whichever is earlier.
+
+4. How to apply for a Passport?
+Step 1: Register on the Passport Seva Portal at passportindia.gov.in.
+Step 2: Log in and fill out the online application form. Select "Fresh Passport" or "Re-issue of Passport" as applicable.
+Step 3: Pay the applicable fee online via credit/debit card, net banking, or SBI challan.
+Step 4: Schedule an appointment at your nearest Passport Seva Kendra (PSK) or Regional Passport Office (RPO).
+Step 5: Visit the PSK/RPO on the scheduled date with all original documents and the printed application receipt.
+Step 6: After verification, your passport will be dispatched to your address.
+
+5. What is the difference between a PSK and an RPO?
+- PSK (Passport Seva Kendra): Front-end offices managed by TCS in partnership with MEA. They handle passport applications, document verification, and biometric capture.
+- RPO (Regional Passport Office): Government offices that handle granting (approval) of passports. Complex cases are referred here.
+- POPSK (Post Office Passport Seva Kendra): Passport services available at select post offices for convenience.
+
+6. What is the online portal for passport services?
+The official portal is passportindia.gov.in. All passport applications must be submitted online through this portal. You can also track application status, schedule appointments, and download forms.
+
+7. Can I apply for a passport from anywhere in India?
+Yes. Passport services are available under the "All India Jurisdiction" scheme. You can apply at any PSK regardless of your present address. Your application will be processed by the RPO under whose jurisdiction your present address falls.
+
+8. What is police verification?
+Police verification is mandatory for all passport applications. After you submit your application at the PSK, the local police will verify your address and identity. For fresh passports, police verification typically happens AFTER passport issuance. For Tatkal passports, police verification is done BEFORE passport issuance in most cases.
+
+9. How long does it take to get a passport?
+- Normal Application: 30 to 45 working days from the date of application.
+- Tatkal Application: 1 to 3 working days after submission at PSK.
+- Police verification can add additional time depending on your local police station's workload.
+
+10. How can I track my passport application status?
+You can track your application status by:
+- Visiting passportindia.gov.in and clicking on "Track Application Status"
+- Entering your file number (starts with your RPO code)
+- Calling the toll-free helpline: 1800-258-1800
+- Sending an SMS: STATUS <file number> to 9704100100
+
+11. What is the helpline number for passport services?
+The toll-free helpline number is 1800-258-1800. It operates Monday to Saturday, 8:00 AM to 10:00 PM. You can also reach the National Call Centre for passport queries.
+
+12. Can I download my passport online?
+No. The original passport booklet is printed and dispatched by India Security Press. You cannot download a digital copy of the passport. However, you can check the dispatch status and speed post tracking number online.

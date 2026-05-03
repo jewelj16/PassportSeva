@@ -1,0 +1,118 @@
+Passport Seva - Complete Application Guide
+
+PART 1: FRESH PASSPORT APPLICATION
+
+1.1 Who Can Apply for a Fresh Passport?
+Any Indian citizen can apply for a fresh passport. There is no minimum age requirement. Parents or legal guardians apply on behalf of minor children.
+
+1.2 Online Application Process
+Step 1: Visit passportindia.gov.in and click "New User? Register Now"
+Step 2: Create an account using your email ID. Verify your email.
+Step 3: Log in and click "Apply for Fresh Passport / Re-issue of Passport"
+Step 4: Fill in the application form carefully:
+  - Personal Details (name, date of birth, place of birth, gender)
+  - Family Details (father's name, mother's name, spouse name if applicable)
+  - Present Address (must match your address proof document)
+  - Emergency Contact Details
+  - Identity & Address Proof Document Details
+  - Passport Details (if re-issuing)
+Step 5: Self-certify the application
+Step 6: Pay the fee online
+Step 7: Schedule an appointment at your preferred PSK
+Step 8: Print the Application Receipt (ARN - Application Reference Number)
+
+1.3 What Happens at the PSK?
+When you visit the PSK on your appointment date:
+Counter A: Token generation and initial document check
+Counter B: Detailed scrutiny of original documents and photocopies
+Counter C: Biometric capture (photograph, fingerprints, signature)
+Counter D: Final verification by the Passport Granting Officer
+
+The entire process at the PSK takes approximately 2-3 hours.
+
+1.4 After the PSK Visit
+- For Normal applications: Passport is printed and dispatched after police verification (if no adverse report).
+- Police verification is conducted by your local police station.
+- Passport is dispatched via Speed Post to your registered address.
+- You can track dispatch status on passportindia.gov.in.
+
+PART 2: RE-ISSUE OF PASSPORT
+
+2.1 When Do You Need to Re-issue?
+- Passport validity expired or expiring within 1 year
+- Pages exhausted (no more blank visa pages)
+- Change in personal details (name, address, spouse name, etc.)
+- Lost or damaged passport
+- Change from minor to adult passport (on turning 18)
+
+2.2 Re-issue Application Process
+The process is similar to fresh passport application. Key differences:
+- Select "Re-issue of Passport" instead of "Fresh Passport"
+- You must provide old passport details (number, date of issue, place of issue)
+- Submit the original old passport at PSK
+- For lost passports: file an FIR first, then submit the FIR copy with your application
+
+2.3 Short Validity Passport
+If your passport has less than 6 months validity, many countries will not grant you a visa. It is advisable to apply for re-issue when your passport has 1 year or less validity remaining.
+
+PART 3: TATKAL (URGENT) PASSPORT
+
+3.1 What is Tatkal Passport?
+Tatkal scheme allows you to get a passport on an urgent basis, typically within 1-3 working days of applying. It requires additional fees and additional documentation.
+
+3.2 Tatkal Eligibility
+Any Indian citizen can apply under Tatkal scheme. You must provide one of the following additional documents as verification:
+- Aadhaar card
+- Voter ID
+- PAN card
+- Verification certificate from an authority (Annexure F)
+- Any document from the "Proof of Identity" list that has been verified by the issuing authority
+
+3.3 Tatkal Fees (in addition to normal fees)
+- For 36-page booklet: Rs. 2,000 additional
+- For 60-page booklet: Rs. 2,000 additional
+These are IN ADDITION to the normal passport fees.
+
+3.4 Tatkal Processing
+- Application is processed on priority basis at the PSK
+- Police verification may be done BEFORE passport issuance for Tatkal cases
+- Passport is typically dispatched within 1-3 working days
+- Post-issuance police verification is also conducted
+
+PART 4: MINOR PASSPORT
+
+4.1 Rules for Minor Passport (Below 18 years)
+- Both parents must give consent (signatures on the application)
+- If only one parent is applying, an Annexure D or Annexure H may be required
+- Minor's birth certificate is mandatory
+- School leaving certificate / bonafide certificate may serve as additional proof
+- Validity: 5 years or until the minor turns 18, whichever is earlier
+- No last page address (since 2017 policy change)
+
+4.2 Single Parent / Divorced Parent Cases
+- If parents are divorced: court order granting custody must be submitted
+- Annexure D: Declaration by the applying parent and consent of the other parent
+- Annexure H: If other parent's consent cannot be obtained
+- In case of child born out of wedlock: Annexure G may be required
+
+PART 5: APPOINTMENT BOOKING
+
+5.1 How to Book an Appointment?
+After submitting the online application and paying the fee:
+- Go to "Schedule Appointment" on the portal
+- Select your preferred PSK from the list
+- Available dates and time slots will be shown
+- Select your preferred slot and confirm
+- You will receive an email and SMS confirmation
+
+5.2 Walk-in Appointments
+Walk-in appointments are not available at all PSKs. Some RPOs allow walk-in for:
+- Senior citizens (65+ years)
+- Government officials with identity cards
+- Physically challenged individuals
+Check with your local PSK for walk-in availability.
+
+5.3 Rescheduling and Cancellation
+- You can reschedule your appointment up to 3 times
+- Log in → "View Saved/Submitted Applications" → "Schedule Appointment" → Reschedule
+- Applications not acted upon within 3 months of payment are automatically closed
