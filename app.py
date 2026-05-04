@@ -37,6 +37,28 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+import subprocess
+
+@st.cache_resource(show_spinner=False)
+def initialize_kb():
+    marker_file = Path("kb_ready.txt")
+    if not marker_file.exists():
+        with st.spinner("Building Knowledge Base... This may take a minute on first run."):
+            try:
+                result = subprocess.run(
+                    [sys.executable, "scripts/build_kb.py"],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
+                marker_file.touch()
+            except subprocess.CalledProcessError as e:
+                st.error("Failed to build the Knowledge Base.")
+                st.error(f"Error output:\\n{e.stderr}")
+                st.stop()
+
+initialize_kb()
+
 # ── Master CSS ───────────────────────────────────────────────────────────────
 st.markdown("""
 <style>

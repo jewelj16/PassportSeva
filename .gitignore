@@ -8,3 +8,4 @@ data/raw/*.pdf
 evaluation/results.csv
 dump.txt
 smai3/
+kb_ready.txt
