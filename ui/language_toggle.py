@@ -2,12 +2,12 @@ import streamlit as st
 
 UI_TEXT = {
     "en": {
-        "title": "🛂 Passport Assistant",
+        "title": "Passport Seva Assistant",
         "subtitle": "Your guide to Indian passport services",
-        "welcome": "Hello! I'm your Passport Assistant. Ask me anything about passport applications, documents, fees, or procedures.",
-        "input_placeholder": "Type your question here...",
+        "welcome": "Hello! I'm your Passport Seva Assistant. Ask me anything about passport applications, documents, fees, or procedures.",
+        "input_placeholder": "Ask anything about passports...",
         "send_button": "Send",
-        "clear_button": "Clear Chat",
+        "clear_button": "🗑️ Clear Chat",
         "lang_toggle_label": "🌐 Language",
         "sources_label": "📚 Sources",
         "confidence_label": "Confidence",
@@ -16,12 +16,12 @@ UI_TEXT = {
         "upload_label": "📎 Upload Document (optional)",
     },
     "hi": {
-        "title": "🛂 पासपोर्ट सहायक",
+        "title": "पासपोर्ट सेवा सहायक",
         "subtitle": "भारतीय पासपोर्ट सेवाओं के लिए आपका मार्गदर्शक",
-        "welcome": "नमस्ते! मैं आपका पासपोर्ट सहायक हूं। पासपोर्ट आवेदन, दस्तावेज़, शुल्क या प्रक्रियाओं के बारे में कुछ भी पूछें।",
-        "input_placeholder": "अपना प्रश्न यहां टाइप करें...",
+        "welcome": "नमस्ते! मैं आपका पासपोर्ट सेवा सहायक हूं। पासपोर्ट आवेदन, दस्तावेज़, शुल्क या प्रक्रियाओं के बारे में कुछ भी पूछें।",
+        "input_placeholder": "पासपोर्ट के बारे में कुछ भी पूछें...",
         "send_button": "भेजें",
-        "clear_button": "चैट साफ़ करें",
+        "clear_button": "🗑️ चैट साफ़ करें",
         "lang_toggle_label": "🌐 भाषा",
         "sources_label": "📚 स्रोत",
         "confidence_label": "विश्वसनीयता",
@@ -38,15 +38,44 @@ def get_ui_text(key: str) -> str:
 
 
 def render_language_selector_startup():
-    """Full-page language selector shown ONCE at startup."""
+    """Full-page language selector shown ONCE at startup — premium design."""
     st.markdown("""
-    <div style='text-align: center; padding: 80px 0 40px 0;'>
-        <h1>🛂 Passport Assistant</h1>
-        <h1>🛂 पासपोर्ट सहायक</h1>
-        <p style='font-size: 1.2em; color: #666;'>
-            Please select your preferred language<br>
-            कृपया अपनी पसंदीदा भाषा चुनें
-        </p>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        .lang-page {
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; padding: 80px 0 40px 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .lang-flag {
+            font-size: 72px;
+            margin-bottom: 16px;
+        }
+        .lang-emblem {
+            width: 72px; height: 72px;
+            background: #1e3a5f; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 32px; font-weight: 700;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(30,58,95,0.25);
+        }
+        .lang-title {
+            font-size: 28px; font-weight: 700; color: #111827;
+            margin-bottom: 4px;
+        }
+        .lang-subtitle {
+            font-size: 16px; color: #6B7280;
+            margin-bottom: 32px;
+        }
+    </style>
+    <div class="lang-page">
+        <div class="lang-flag">🇮🇳</div>
+        <div class="lang-emblem">🏛</div>
+        <div class="lang-title">Passport Seva Assistant</div>
+        <div class="lang-title" style="font-size:24px; margin-bottom:8px;">पासपोर्ट सेवा सहायक</div>
+        <div class="lang-subtitle">
+            Please select your preferred language &nbsp;|&nbsp; कृपया अपनी पसंदीदा भाषा चुनें
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -66,16 +95,3 @@ def render_language_selector_startup():
 
     # CRITICAL: stop here so the rest of the app doesn't render underneath
     st.stop()
-
-
-def render_language_toggle_topright():
-    """Compact toggle shown in top-right corner after initial selection."""
-    current = st.session_state.get("language", "en")
-    label = "हिंदी" if current == "en" else "English"
-    new_lang = "hi" if current == "en" else "en"
-
-    _, col_right = st.columns([6, 1])
-    with col_right:
-        if st.button(f"🌐 {label}", key="lang_toggle_btn"):
-            st.session_state["language"] = new_lang
-            st.rerun()
