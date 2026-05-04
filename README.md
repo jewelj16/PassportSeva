@@ -71,3 +71,15 @@ Get it at: https://aistudio.google.com/app/apikey
 ## Team
 
 SMAI Assignment 3 — Topic T10.1
+
+#env file format: 
+```
+GOOGLE_API_KEY=<your_google_api_key>
+CHROMA_PERSIST_PATH=./chroma_db
+COLLECTION_NAME=passport_knowledge_base
+EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+LLM_MODEL=gemini-1.5-flash
+MAX_RETRIEVED_CHUNKS=5
+MEMORY_WINDOW_SIZE=10
+DEFAULT_LANGUAGE=en
+```
