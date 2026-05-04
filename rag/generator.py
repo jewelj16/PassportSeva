@@ -1,4 +1,9 @@
-from config.settings import GOOGLE_API_KEY, LLM_MODEL, SYSTEM_PROMPT_EN, SYSTEM_PROMPT_HI
+from config.settings import SYSTEM_PROMPT_EN, SYSTEM_PROMPT_HI
+import os
+
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 
 class ResponseGenerator:
@@ -8,10 +13,10 @@ class ResponseGenerator:
 
     def _get_client(self):
         if self._client is None:
-            from google import genai
-            if not GOOGLE_API_KEY:
-                raise ValueError("GOOGLE_API_KEY not set. Add it to your .env file.")
-            self._client = genai.Client(api_key=GOOGLE_API_KEY)
+            from groq import Groq
+            if not GROQ_API_KEY:
+                raise ValueError("GROQ_API_KEY not set. Add it to your .env file.")
+            self._client = Groq(api_key=GROQ_API_KEY)
         return self._client
 
     def generate(self, query: str, retrieved_chunks: list, conversation_history: list = None) -> dict:
@@ -23,9 +28,7 @@ class ResponseGenerator:
             for turn in conversation_history[-4:]:
                 history_str += f"User: {turn['user']}\nAssistant: {turn['assistant']}\n\n"
 
-        prompt = f"""{system_prompt}
-
-CONVERSATION HISTORY:
+        user_message = f"""CONVERSATION HISTORY:
 {history_str}
 RETRIEVED CONTEXT:
 {context}
@@ -36,33 +39,34 @@ Provide a clear, helpful answer based ONLY on the context above.
 At the end, mention which source(s) you used in format: [Source: ...]
 If you cannot answer from context, say so clearly.
 """
-        try:
-            from google import genai
-            from google.genai import types
 
+        try:
             client = self._get_client()
-            response = client.models.generate_content(
-                model=LLM_MODEL,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.2,
-                    max_output_tokens=1024,
-                    top_p=0.95,
-                )
+            response = client.chat.completions.create(
+                model=GROQ_MODEL,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_message}
+                ],
+                temperature=0.2,
+                max_tokens=1024,
+                top_p=0.95
             )
 
-            if not response.text:
-                raise ValueError("Empty response (possibly blocked by safety filters).")
+            answer = response.choices[0].message.content
+            if not answer:
+                raise ValueError("Empty response from Groq.")
 
             sources = list({c["source"] for c in retrieved_chunks[:3]})
             return {
-                "answer": response.text,
+                "answer": answer,
                 "sources": sources,
                 "confidence": self._assess_confidence(retrieved_chunks),
                 "retrieved_count": len(retrieved_chunks)
             }
+
         except Exception as e:
-            print(f"[ERROR] Gemini failed: {e}")
+            print(f"[ERROR] Groq failed: {e}")
             fallback = (
                 "मैं अभी उत्तर देने में असमर्थ हूं। कृपया passportindia.gov.in पर जाएं।"
                 if self.language == "hi" else

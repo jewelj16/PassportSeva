@@ -2,7 +2,7 @@ import json
 import time
 import re
 from rag.retriever import HybridRetriever
-from rag.generator import ResponseGenerator
+from rag.generator1 import ResponseGenerator
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 import pandas as pd

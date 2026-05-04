@@ -10,7 +10,7 @@ from rag.vectorstore import PassportVectorStore
 from rag.retriever import HybridRetriever
 from rag.loader import DocumentLoader
 from rag.chunker import SmartChunker
-from rag.generator import ResponseGenerator
+from rag.generator1 import ResponseGenerator
 from evaluation.evaluator import PassportRAGEvaluator
 from pathlib import Path
 
