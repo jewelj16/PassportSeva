@@ -83,7 +83,7 @@ def load_rag_pipeline():
     from rag.vectorstore import PassportVectorStore
     from rag.retriever import HybridRetriever
 
-    loader = DocumentLoader("data/raw")
+    loader = DocumentLoader("data/raw", "passport_docs")
     chunker = SmartChunker()
     embedder = EmbeddingEngine()
     docs = loader.load_all()

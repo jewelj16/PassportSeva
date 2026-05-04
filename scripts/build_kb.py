@@ -24,7 +24,7 @@ from loguru import logger
 def main():
     logger.info("=== Building Passport Knowledge Base ===")
 
-    loader = DocumentLoader("data/raw")
+    loader = DocumentLoader("data/raw", "passport_docs")
     chunker = SmartChunker()
     embedder = EmbeddingEngine()
 

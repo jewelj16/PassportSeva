@@ -9,22 +9,26 @@ def log(msg):
 
 
 class DocumentLoader:
-    def __init__(self, raw_dir: str = "data/raw"):
-        self.raw_dir = Path(raw_dir)
+    def __init__(self, *raw_dirs: str):
+        if not raw_dirs:
+            raw_dirs = ("data/raw",)
+        self.raw_dirs = [Path(d) for d in raw_dirs]
 
     def load_all(self) -> list:
         docs = []
-        if not self.raw_dir.exists():
-            print(f"[ERROR] Raw data directory not found: {self.raw_dir}")
-            return docs
-        for file in sorted(self.raw_dir.iterdir()):
-            if file.suffix == ".txt":
-                docs.extend(self._load_txt(file))
-            elif file.suffix == ".pdf":
-                docs.extend(self._load_pdf(file))
-            elif file.suffix == ".jsonl":
-                docs.extend(self._load_jsonl(file))
-        log(f"Loaded {len(docs)} raw documents from {self.raw_dir}")
+        for raw_dir in self.raw_dirs:
+            if not raw_dir.exists():
+                print(f"[ERROR] Raw data directory not found: {raw_dir}")
+                continue
+            for file in sorted(raw_dir.iterdir()):
+                if file.suffix == ".txt":
+                    docs.extend(self._load_txt(file))
+                elif file.suffix == ".pdf":
+                    docs.extend(self._load_pdf(file))
+                elif file.suffix == ".jsonl":
+                    docs.extend(self._load_jsonl(file))
+            log(f"Loaded docs from {raw_dir}")
+        log(f"Total: {len(docs)} raw documents from {len(self.raw_dirs)} directories")
         return docs
 
     def _load_txt(self, path: Path) -> list:
