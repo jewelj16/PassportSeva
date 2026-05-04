@@ -318,29 +318,37 @@ generator = ResponseGenerator(language=lang)
 toggle_label = "Switch to Hindi" if lang == "en" else "अंग्रेज़ी में बदलें"
 
 st.markdown(f"""
+<style>
+    /* Move the native Streamlit toggle into the fixed header */
+    div[data-testid="stCheckbox"], div[data-testid="stToggle"] {{
+        position: fixed;
+        top: 16px;
+        right: 32px;
+        z-index: 10000;
+    }}
+    div[data-testid="stCheckbox"] p, div[data-testid="stToggle"] p {{
+        font-size: 14px !important;
+        color: #374151 !important;
+        font-weight: 500 !important;
+    }}
+</style>
 <div class="psa-header">
     <div class="psa-header-left">
         <div class="emblem">🏛</div>
         <span class="title-text">Passport Seva Assistant</span>
         <span style="font-size:22px;">🇮🇳</span>
     </div>
-    <div class="psa-header-right">
-        <span style="font-size:14px;">{toggle_label}</span>
-    </div>
 </div>
 <div class="header-spacer"></div>
 """, unsafe_allow_html=True)
 
-# Hidden but functional Streamlit toggle for Hindi (placed unobtrusively)
-col_spacer, col_toggle = st.columns([8, 1])
-with col_toggle:
-    hindi_on = st.toggle("हिंदी", value=(lang == "hi"), label_visibility="collapsed")
-    if hindi_on and lang == "en":
-        st.session_state["language"] = "hi"
-        st.rerun()
-    elif not hindi_on and lang == "hi":
-        st.session_state["language"] = "en"
-        st.rerun()
+hindi_on = st.toggle(toggle_label, value=(lang == "hi"))
+if hindi_on and lang == "en":
+    st.session_state["language"] = "hi"
+    st.rerun()
+elif not hindi_on and lang == "hi":
+    st.session_state["language"] = "en"
+    st.rerun()
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
