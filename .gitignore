@@ -7,3 +7,4 @@ data/raw/*.pdf
 .DS_Store
 evaluation/results.csv
 dump.txt
+smai3/
