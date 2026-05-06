@@ -27,7 +27,25 @@ Navigating Indian passport documentation can be tedious. **Passport Seva Assista
 - 🧠 **Session Memory:** Sliding window retains last 10 conversation turns so follow-up questions work naturally.
 - 🌐 **Bilingual Support:** Automatically detects Hindi input, translates for the retrieval pipeline, and returns the response in Hindi.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="output_images/1.png" width="400"/><br/><sub>Language selection page</sub></td>
+    <td align="center"><img src="output_images/2.png" width="400"/><br/><sub>Chat interface with Hindi toggle</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="output_images/3.png" width="400"/><br/><sub>RAG response with source citations</sub></td>
+    <td align="center"><img src="output_images/5.png" width="400"/><br/><sub>Multi-turn conversation with memory</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="output_images/6.png" width="400"/><br/><sub>Sidebar with chat history</sub></td>
+    <td align="center"><img src="output_images/7.png" width="400"/><br/><sub>Hindi mode with translated response</sub></td>
+  </tr>
+</table>
+
 ## Setup
+
 
 1. Clone this repository:
    ```bash
